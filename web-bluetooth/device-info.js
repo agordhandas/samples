@@ -23,7 +23,7 @@ function onButtonClick() {
   navigator.bluetooth.requestDevice({filters: filters})
   .then(device => {
     log('> Name:             ' + device.name);
-    log('> Properties:       ' + device);
+    log('> Properties:       ' + device.uuids);
     log('> Connected:        ' + device.gatt.connected);
   })
   .catch(error => {
